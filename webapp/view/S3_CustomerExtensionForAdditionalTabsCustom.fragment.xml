@@ -1,0 +1,20 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout"
+	xmlns:sap.ca.ui="sap.ca.ui" xmlns:suite="sap.suite.ui.commons">
+	<!-- This extension point can be used to add fields to items -->
+	<!--<IconTabFilter xmlns="sap.m" id="MIBObjectLinksTabFilter_clone" icon="sap-icon://chain-link" tooltip="{i18n&gt;relatedObjects.tooltip}" count="{detail&gt;/ObjectLinksCount}" visible="{ path: 'detail&gt;/TaskSupports/TaskObject', formatter: 'cross.fnd.fiori.inbox.Conversions.formatterVisibilityOfObjectIconTab' }" key="OBJECTLINKS">
+						<core:ExtensionPoint xmlns:core="sap.ui.core" name="CustomerExtensionForObjectLinkTabContent">
+							<core:Fragment fragmentName="cross.fnd.fiori.inbox.frag.ObjectLinks" type="XML"/>
+						</core:ExtensionPoint>
+					</IconTabFilter> -->
+					
+	<IconTabFilter icon="sap-icon://add" visible="{= ${detail>/TaskDefinitionID} === 'TS90000141' ? true : false }">
+							<content>
+								<List id="LoadID" items="{loanReq>/loanrequestSet}">
+									<items>
+										<StandardListItem title="{loanReq>Qid}" description="{loanReq>Ename}" type="Active" iconInset="false" press=""></StandardListItem>
+									</items>
+								</List>
+							
+							</content>
+						</IconTabFilter>				
+</core:FragmentDefinition>

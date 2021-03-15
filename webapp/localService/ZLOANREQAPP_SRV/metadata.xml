@@ -1,0 +1,167 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZLOANREQAPP_SRV" xml:lang="en" sap:schema-version="1">
+            <EntityType Name="loantype" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Ltype"/>
+                </Key>
+                <Property Name="Ltype" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Single Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ltypedesc" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Short Descript." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="loanlist" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Seqno"/>
+                </Key>
+                <Property Name="Seqno" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Not used" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ltype" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Objid" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Object ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Startdate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Start Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Enddate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="End Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lamount" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lbalance" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Repayinst" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="loanrequest" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Wiid"/>
+                </Key>
+                <Property Name="Mrgself" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Loan for Self" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Attachid" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Object number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mrgdep" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Loan for Dep" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Attachname" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mrgdt" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Start Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mrgstatus" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Marital Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NotesCounter" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="Byte" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Qid" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="ID/number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Document ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Wiid" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ename" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="Char80" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Role" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nationality" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="Nationality" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Postxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Entity" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Division" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Hdate" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Dob" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Character Field Length = 10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Persid" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="ID number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Basic" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bname" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Bank name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bacno" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Bank Account" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reqdate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Current Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ltype" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Loan Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lvalue" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lmonths" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Loan Installment mnt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Monthinst" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Actpaid" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lstdate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Loan Start Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Instdate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Installment Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Valnewloan" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Paymethtype" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Single Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Prevloan" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Prevloanbal" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Previnstall" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Prevreminstall" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Payment Period Mnths" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Approval" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Approval" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nonapproval" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Non Approval" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Approvalnew" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Approval" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Defamount" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mttwo" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="More Than Two loans" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lfsr" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Loan for same reason" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Salwages" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tdate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Start Date" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Payperiod" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Payment Period Mnths" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Paytype" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Payment Mode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Job" Type="Edm.String" Nullable="false" MaxLength="25" sap:unicode="false" sap:label="Job Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Posno" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Cost Est. No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Alloanamt" Type="Edm.String" Nullable="false" MaxLength="13" sap:unicode="false" sap:label="char13" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Setofloan" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Loan type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Respemp" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Empl./appl.name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Apporrej" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Char01" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rejectreason" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Rejection reason" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ltypetext" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Short Descript." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ishr" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ischmanexist" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Single-Character Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Message" Type="Edm.String" Nullable="false" MaxLength="255" sap:unicode="false" sap:label="Char255" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Initiator" Type="Edm.String" Nullable="false" MaxLength="14" sap:unicode="false" sap:label="Initiator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="notesSet" Relationship="ZLOANREQAPP_SRV.Notes" FromRole="FromRole_Notes" ToRole="ToRole_Notes"/>
+            </EntityType>
+            <EntityType Name="paymentmode" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Ltype"/>
+                </Key>
+                <Property Name="Ltype" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Single Value" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ltypedesc" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="Short Descript." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="notes" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WIID"/>
+                </Key>
+                <Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Document ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="User" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="ID/number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel no." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ExtPersonId" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Person ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Empl./Appl.Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NoticeText" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Note" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ModTimestamp" Type="Edm.DateTime" Nullable="false" Precision="0" sap:unicode="false" sap:label="Time Stamp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ModTimezone" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Time Zone" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DummyNotesIncl" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Dummy function in length 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WIID" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="Attach" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Attachid"/>
+                    <PropertyRef Name="Wiid"/>
+                </Key>
+                <Property Name="Attachid" Type="Edm.String" Nullable="false" MaxLength="90" sap:unicode="false" sap:label="Object number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Wiid" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Attachname" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="FileAttachments" m:HasStream="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Attachid"/>
+                    <PropertyRef Name="Wiid"/>
+                </Key>
+                <Property Name="Attachid" Type="Edm.String" Nullable="false" MaxLength="90" sap:unicode="false" sap:label="Object number" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Attachname" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Title" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Wiid" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="Notes" sap:content-version="1">
+                <End Type="ZLOANREQAPP_SRV.loanrequest" Multiplicity="1" Role="FromRole_Notes"/>
+                <End Type="ZLOANREQAPP_SRV.notes" Multiplicity="*" Role="ToRole_Notes"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_Notes">
+                        <PropertyRef Name="Wiid"/>
+                    </Principal>
+                    <Dependent Role="ToRole_Notes">
+                        <PropertyRef Name="WIID"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZLOANREQAPP_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="loantypeSet" EntityType="ZLOANREQAPP_SRV.loantype" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="loanlistSet" EntityType="ZLOANREQAPP_SRV.loanlist" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="loanrequestSet" EntityType="ZLOANREQAPP_SRV.loanrequest" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="paymentmodeSet" EntityType="ZLOANREQAPP_SRV.paymentmode" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="notesSet" EntityType="ZLOANREQAPP_SRV.notes" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="AttachSet" EntityType="ZLOANREQAPP_SRV.Attach" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="FileAttachmentsSet" EntityType="ZLOANREQAPP_SRV.FileAttachments" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="NotesSet" Association="ZLOANREQAPP_SRV.Notes" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="loanrequestSet" Role="FromRole_Notes"/>
+                    <End EntitySet="notesSet" Role="ToRole_Notes"/>
+                </AssociationSet>
+                <FunctionImport Name="getloanlist" ReturnType="Collection(ZLOANREQAPP_SRV.loanlist)" EntitySet="loanlistSet" m:HttpMethod="GET" sap:action-for="ZLOANREQAPP_SRV.loanlist">
+                    <Parameter Name="Pernr" Type="Edm.String" Mode="In" MaxLength="8"/>
+                </FunctionImport>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZLOANREQAPP_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZLOANREQAPP_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>
