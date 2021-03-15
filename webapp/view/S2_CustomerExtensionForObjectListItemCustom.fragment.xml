@@ -20,9 +20,7 @@
 				tooltip="{parts: [{path: 'CustomAttributeData'}, {path: 'taskDefinitionsModel&gt;/'}], formatter: 'cross.fnd.fiori.inbox.Conversions.formatterListCustomObjectAttributeValue'}"/>
 				
 			<ObjectAttribute id="ATTR7">
-				<customContent>
-				<Link text="Attachment"/>	
-				</customContent>
+				
 				
 			</ObjectAttribute>	
 		</attributes>
